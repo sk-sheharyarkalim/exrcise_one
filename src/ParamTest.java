@@ -4,13 +4,15 @@ class ParamTest {
 
         int val;
 
-        String s1, s2;
+        String s1;
+
+        StringBuilder s2 = new StringBuilder();
 
         val = 10;
 
         s1 = "apples";
 
-        s2 = "pears";
+        s2.append("pears");
 
 
 
@@ -18,7 +20,7 @@ class ParamTest {
 
         System.out.println("s1 is "  + s1);
 
-        System.out.println("s2 is " + s2);
+        System.out.println("s2 is " + s2.toString());
 
 
 
@@ -42,7 +44,7 @@ class ParamTest {
 
 
 
-    public static void modify(int a, String r1, String r2) {
+    public static void modify(int a, String r1, StringBuilder r2) {
 
         System.out.println("in modify ...");
 
@@ -50,7 +52,7 @@ class ParamTest {
 
         r1 = null;
 
-        r2 += " taste good";
+        r2.append(" taste good");
 
         System.out.println("a is " + a);
 
